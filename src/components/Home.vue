@@ -1,10 +1,12 @@
 <template>
   <div>
+    <!-- 抽离为组件导入 -->
     <el-header class="header" height="100px">
       <h3>我的网站</h3>
       <p>Vue小模块之吹牛B功能</p>
     </el-header>
-    <div>
+    <el-container style="min-height: calc(100vh - 100px);">
+      <!-- aside也单独抽出 -->
       <el-aside width="200px">
         <el-row class="tac">
           <el-col :span="12">
@@ -120,11 +122,12 @@
           </el-col>
         </el-row>
       </el-aside>
-    </div>
+    </el-container>
   </div>
 </template>
 
 <script>
+
 export default {
   methods: {
       handleOpen(key, keyPath) {
@@ -138,9 +141,14 @@ export default {
 </script>
 
 <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
   .header{
     background-color: #272626;
     color: white;
+    overflow: hidden;
   }
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
@@ -155,14 +163,11 @@ export default {
   .el-aside {
     background-color: #272626;
     overflow: hidden;
-    height: 100vh;
   }
   .el-main {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
-  line-height: 160px;
-  height: 80vh;
   }
   .el-footer {
   background-color: #B3C0D1;

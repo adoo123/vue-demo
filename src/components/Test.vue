@@ -1,6 +1,15 @@
 <template>
-      <el-container>
-        <el-main>Main</el-main>
-        <el-footer>Footer</el-footer>
-      </el-container>
+  <div>
+    <h1>{{title}}</h1>
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: 'Test1234'
+    }
+  }
+}
+</script>

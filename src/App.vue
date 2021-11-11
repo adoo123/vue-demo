@@ -1,12 +1,6 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
-    </div>
+  <div>
+    <!-- main代表路由视图的动态切换 -->
+    <router-view></router-view>
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'App',
-  }
-</script>
-
